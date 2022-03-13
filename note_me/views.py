@@ -49,7 +49,7 @@ def getNotes(request):
     return Response(serializer.data)
    
 @api_view(['GET'])
-def getNotes(request, pk):
+def note(request, pk):
     note = Note.objects.get(id=pk)
     serializer = NoteSerializer(note, many=False)
     return Response(serializer.data)
