@@ -6,5 +6,6 @@ class Note(models.Model):
     update = models.DateTimeField(auto_now=True),
     created = models.DateField(auto_now_add=True),
 
-    def __setattr__(self):
-        return self.body[0:50]
+
+    def ___str__(self):
+        return self.body
